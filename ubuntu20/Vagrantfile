@@ -15,8 +15,8 @@ Vagrant.configure(2) do |config|
       node.vm.hostname = "ubuntuvm0#{i}.example.com"
       # node.vm.network "private_network", ip: "172.16.16.10#{i}"
       node.vm.network "public_network", ip: "192.168.1.20#{i}"  # bridged addapter
-      node.vm.synced_folder "/media/storage1", "/home/storage1"
-      node.vm.synced_folder "/media/storage2", "/home/storage2"
+      node.vm.synced_folder "/media/storage1", "/media/storage1"
+      node.vm.synced_folder "/media/storage2", "/media/storage2"
       node.vm.provider "virtualbox" do |v|
         v.name = "ubuntuvm0#{i}"
         v.memory = 2048
